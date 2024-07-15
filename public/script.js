@@ -131,10 +131,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const baseCurrency = baseCurrencySelect.value;
         const targetCurrency = targetCurrencySelect.value;
         const date = historicalDateInput.value; // Get date from input
+        const amount = parseFloat(amountInput.value); // Get amount from input
         try {
             // Fetch and display the historical exchange rate
             const rate = await fetchHistoricalRates(baseCurrency, targetCurrency, date);
-            historicalRatesContainer.textContent = `Historical exchange rate on ${date}: 1 ${baseCurrency} = ${rate} ${targetCurrency}`;
+            const historicalAmount = (amount * rate).toFixed(2); // Calculate the historical amount
+            historicalRatesContainer.textContent = `Historical exchange rate on ${date}: ${amount} ${baseCurrency} = ${historicalAmount} ${targetCurrency}`;
         } catch (error) {
             historicalRatesContainer.textContent = `Error: ${error.message}`;
         }

@@ -2,36 +2,41 @@ body {
     background: url(images/currency.webp) no-repeat center center;
     background-size: cover;   
 }
+
 body, html {
     font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    margin: 0;
 }
 
 .card-header {
     background-color: rgba(0, 0, 0, 0.7);
 }
+
 .card {
     width: 100%;
     max-width: 400px;
     padding: 20px;
     border-radius: 20px;
-    background: rgba(117, 114, 114, 0.7); /* White background with 80% opacity */
+    background: rgba(117, 114, 114, 0.75); /* Semi-transparent background */
     box-shadow: 0 0 30px 10px rgb(255, 52, 221);
     transition: transform 0.3s ease; 
-    color:white;
+    color: white;
+    overflow: hidden; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .card:hover {
-   transform: scale(1.05);
-   box-shadow: 0 0 30px 10px rgb(8, 182, 240);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px 10px rgb(8, 182, 240);
 }
 
 #converted-amount {
-    color: #ff69b4; 
+    color: #ff69b4;
+    font-weight: bold; 
 }
 
 .gradient-text {
@@ -43,7 +48,7 @@ body, html {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color:rgb(255, 52, 221);
+    color: rgb(255, 52, 221);
     font-weight: bold;
 }
 
@@ -68,7 +73,8 @@ h1 {
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 10px; /* Increased padding for better appearance */
+    width: 100%; /* Ensure the button width is 100% */
 }
 
 .converter button:hover {
