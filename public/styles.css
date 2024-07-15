@@ -1,3 +1,7 @@
+body {
+    background: url(images/currency.webp) no-repeat center center;
+    background-size: cover;   
+}
 body, html {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,16 +9,20 @@ body, html {
     align-items: center;
     height: 100%;
     margin: 0;
-    background-color: black;
 }
 
+.card-header {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 .card {
     width: 100%;
     max-width: 400px;
     padding: 20px;
     border-radius: 20px;
+    background: rgba(117, 114, 114, 0.7); /* White background with 80% opacity */
     box-shadow: 0 0 30px 10px rgb(255, 52, 221);
     transition: transform 0.3s ease; 
+    color:white;
 }
 
 .card:hover {
